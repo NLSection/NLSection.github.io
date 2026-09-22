@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Section Labs</title>
+<meta name="description" content="Section Labs maakt Nederlandstalige programma's voor thuis. Gratis, zonder account, en je gegevens blijven op je eigen computer.">
+<link rel="icon" href="assets/section-labs.png">
+<style>
+  /* Zelfde kleuren als de FBS-pagina (donker is de standaard). */
+  :root {
+    --bg: #0f1117; --surface: #1a1d27; --card: #212433; --border: #2e3148;
+    --text: #a0a8c0; --text-h: #e8eaf6; --text-dim: #5a607a;
+    --accent: #5c7cfa; --accent-2: #9b6ffa; --on-accent: #ffffff;
+    color-scheme: dark;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f5efe6; --surface: #fbf7f0; --card: #ffffff; --border: #d8cdb8;
+      --text: #5a4f3d; --text-h: #2a2218; --text-dim: #948568;
+      --accent: #4263eb; --accent-2: #7c4dff;
+      color-scheme: light;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 17px/1.6 system-ui, 'Segoe UI', Roboto, sans-serif;
+  }
+  a { color: var(--accent); }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+  h1, h2, h3 { color: var(--text-h); line-height: 1.2; margin: 0; }
+
+  header { padding: 22px 0; }
+  .merk { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 18px; letter-spacing: 0.08em; color: var(--text-h); }
+  .merk img { width: 36px; height: 36px; border-radius: 8px; }
+
+  .held { text-align: center; padding: 56px 0 48px; }
+  .held img { width: 96px; height: 96px; border-radius: 20px; }
+  .held h1 { margin-top: 22px; font-size: clamp(30px, 5vw, 46px); letter-spacing: -0.02em; }
+  .held p { max-width: 620px; margin: 16px auto 0; font-size: 19px; }
+
+  section { padding: 56px 0; border-top: 1px solid var(--border); }
+  section h2 { font-size: 28px; margin-bottom: 28px; text-align: center; }
+
+  /* Eén kaart per app; een nieuwe app is een kaart erbij. */
+  .app {
+    display: grid; grid-template-columns: 1fr 1.3fr; gap: 36px; align-items: center;
+    background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 32px;
+  }
+  .app + .app { margin-top: 24px; }
+  .app-naam { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+  .app-naam svg { width: 48px; height: 48px; flex: none; }
+  .app-naam h3 { font-size: 24px; }
+  .app-naam small { display: block; font-size: 14px; font-weight: 400; color: var(--text-dim); margin-top: 2px; }
+  .app p { margin: 0 0 12px; }
+  .app ul { margin: 0 0 20px; padding-left: 20px; }
+  .app li { margin-bottom: 4px; }
+  .knop {
+    display: inline-block; padding: 12px 24px; border-radius: 10px; font-weight: 600;
+    text-decoration: none; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: var(--on-accent);
+  }
+  .knop:hover { filter: brightness(1.08); }
+  .opname {
+    display: block; width: 100%; height: auto; border-radius: 10px;
+    border: 1px solid var(--border); box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+  }
+
+  .contact { text-align: center; background: var(--surface); }
+  .contact h2 { margin-bottom: 12px; }
+  .contact p { margin: 0; }
+
+  footer { padding: 32px 0 40px; font-size: 14px; color: var(--text-dim); text-align: center; border-top: 1px solid var(--border); }
+
+  @media (max-width: 760px) {
+    .app { grid-template-columns: 1fr; gap: 24px; padding: 22px; }
+    .held { padding-top: 24px; }
+    section { padding: 40px 0; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="merk"><img src="assets/section-labs.png" alt="">SECTION LABS</div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap held">
+    <img src="assets/section-labs.png" alt="Logo van Section Labs">
+    <h1>Programma's voor thuis</h1>
+    <p>Section Labs maakt Nederlandstalige programma's voor thuis. Gratis, zonder account, en je gegevens blijven op je eigen computer.</p>
+  </div>
+
+  <section id="apps">
+    <div class="wrap">
+      <h2>Apps</h2>
+
+      <article class="app">
+        <div>
+          <div class="app-naam">
+            <svg viewBox="0 0 40 40" aria-hidden="true">
+              <defs><linearGradient id="g-fbs" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#5c7cfa"/><stop offset="100%" stop-color="#9b6ffa"/></linearGradient></defs>
+              <rect x="1" y="1" width="38" height="38" rx="10" fill="url(#g-fbs)"/>
+              <rect x="8" y="22" width="6" height="10" rx="1.5" fill="white" opacity="0.7"/>
+              <rect x="17" y="16" width="6" height="16" rx="1.5" fill="white" opacity="0.85"/>
+              <rect x="26" y="10" width="6" height="22" rx="1.5" fill="white"/>
+            </svg>
+            <h3>FBS<small>Financieel Beheer Systeem</small></h3>
+          </div>
+          <p>Zie waar je geld heen gaat. Je leest de bestanden van je bank in en FBS maakt er een overzicht van.</p>
+          <ul>
+            <li>Boekingen automatisch ingedeeld</li>
+            <li>Potjes, budgetten en vaste lasten</li>
+            <li>Voor Windows en macOS</li>
+          </ul>
+          <a class="knop" href="https://fbs.section-labs.nl">Naar FBS</a>
+        </div>
+        <a href="https://fbs.section-labs.nl"><img class="opname" src="assets/dashboard.png" alt="Het dashboard van FBS"></a>
+      </article>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <p>Een vraag of een idee? Mail naar <a href="mailto:info@section-labs.nl">info@section-labs.nl</a>.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">Section Labs</div>
+</footer>
+
+</body>
+</html>
