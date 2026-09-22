@@ -60,7 +60,8 @@
     display: inline-block; padding: 12px 24px; border-radius: 10px; font-weight: 600;
     text-decoration: none; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: var(--on-accent);
   }
-  .knop:hover { filter: brightness(1.08); }
+  /* Oplichten zonder filter: in sommige browsers verdween de knop bij aanwijzen (22-09-2026). */
+  .knop:hover { background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), linear-gradient(135deg, var(--accent), var(--accent-2)); }
   .opname {
     display: block; width: 100%; height: auto; border-radius: 10px;
     border: 1px solid var(--border); box-shadow: 0 20px 60px rgba(0,0,0,0.35);
